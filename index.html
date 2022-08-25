@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>k</title>
+    <script src="https://kit.fontawesome.com/e152785f1e.js" crossorigin="anonymous"></script>
+    <style>
+        #eye{
+            position: absolute;
+            left: 58rem;
+            top: 17.5rem;
+            cursor: pointer;
+            z-index: 111;
+        }
+        .icon{
+            z-index: 11;
+        }
+        body{
+            text-align: center;
+            background-color: grey;
+        }
+        input{
+            margin-top: 20%;
+            width: 40%;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+         <input type="password" name="password" id="inputField" > 
+         <i class="fa-solid fa-eye" id="eye"></i>
+        
+         
+    </form>
+    <script>
+        let icon = document.getElementById("eye");
+        icon.addEventListener("mousedown", ()=>{
+            // alert('nnjjj')   ;        
+             let inputField = document.getElementById("inputField");
+            if (inputField.type == "password") {
+                inputField.type = "text";
+                
+            }
+        })
+        icon.addEventListener("mouseup", ()=>{
+            let myInput = document.getElementById("inputField");
+            if(myInput.type == "text"){
+                myInput.type= "password"
+            }
+            
+        })
+    </script>
+</body>
+</html>
